@@ -6,9 +6,7 @@ class Game():
         self.player2 = player2
 
     def winning_choice(self, choice1, choice2):
-        if choice1 == choice2:
-            return None
-        elif choice1 == "rock" and choice2 == "paper":
+        if choice1 == "rock" and choice2 == "paper":
             return choice2
         elif choice1 == "rock" and choice2 == "scissors":
             return choice1
