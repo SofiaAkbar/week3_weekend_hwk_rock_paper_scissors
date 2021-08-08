@@ -9,7 +9,8 @@ def new_game(choice1, choice2):
     player2 = Player("Player 2", choice2)
     game = Game(player1, player2)
     winner = game.find_winner()
-    return render_template('base.html', title='Game', winner=winner)
+    return render_template('base.html', winner=winner)
 
-
-
+@app.route('/')
+def index():
+    return render_template('index.html')

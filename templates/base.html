@@ -1,13 +1,20 @@
+
+
 <html>
     <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <title>
             RPS Game
         </title>
     </head>
     <body>
+        <nav>
+            <a href="/">Home Page</a>
+        </nav>
         <h1>
             {% if winner != None %}
-                {{ winner.name }} wins by playing {{ winner.choice }}
+                <span class= "inputs">{{ winner.name }}</span> wins by playing <span class= "inputs">{{ winner.choice }}</span>
+                
             {% else %}
                 IT WAS A DRAW
             {% endif %} 
